@@ -7,6 +7,7 @@
     background-color: white;
     padding: 25px 10%;
     box-shadow: 1px 1px;
+    background-color: rgb(237, 237, 191);
 
     
 }
@@ -24,7 +25,6 @@
     align-items: center;
     justify-content: center;
     display: block;
-    cursor: none;
     margin-top: 30px;
 }
 button,ul,li{
@@ -83,8 +83,17 @@ button:hover{
     margin-right: 1000px;
 
 }
-.p1{
-    margin-top: 15px;
+.audio{
+  height: 50px;
+  width: 350px;
+  background: #FFDCF4;
+  box-shadow: 0 0 20px 0 #FFDCF4;
+  font-family: arial;
+  color: white;
+  font-size: 0.75em;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 6px auto;
 }
 
 .container{
@@ -93,3 +102,15 @@ button:hover{
     gap: 5px;
     margin-top: -30px;
 }
+.Add{
+    box-shadow: 2px 2px;
+    background-color: #efd1e5;
+    box-sizing: border-box;
+    padding: 5px 20px;
+}
+
+.search{
+    font-size: 17px;
+    border-style:groove;
+}
+

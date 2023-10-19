@@ -7,13 +7,29 @@
         <section>
         <div class="top-bar">
             <header>
-                <button class="logo" href="#Home">@GenZWave</button>
+                <button onclick="Home()" class="logo" href="#Home">@GenZWave</button>
             </header>
             <ul class="function">
-                <li><button href="#Announcement">Announcement</button></li>
-                <li><button href="#Playlist">Playlist</button></li>
+                <li><button onclick="Click()" href="#Announcement">Announcement</button></li>
+                <li id="playlist"><button onclick="Playlist()" href="#Playlist">Playlist</button></li>
                 <li><button href="#Promotion">Promotion</button></li>
             </ul>
+            <script>
+                function Click(){
+                    console.log("Button Clicked")
+                }
+                function Playlist(){
+                    document.getElementById("playlist").addEventListener("click",function(){
+                        alert('This is the Playlist page');
+                        document.body.style.backgroundColor = "pink";
+                    });
+                    window.location.href = "Playlist.html";
+                    
+                }
+                function Home(){
+                    window.location.href = "producer.html";
+                }
+            </script>
             <button class="producer">Producer</button>
         </div>
         <div class="row">

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <section>
+            <div class="top-bar">
+                <header>
+                    <button onclick="Home()" class="logo" href="#Home">@GenZWave</button>
+                </header>
+                <ul class="function">
+                    <li><button onclick="Click()" href="#Announcement">Announcement</button></li>
+                    <li id="playlist"><button onclick="Click()" href="#Playlist">Playlist</button></li>
+                    <li><button href="#Promotion">Promotion</button></li>
+                </ul>
+                <script>
+                    function Click(){
+                        console.log("Button Clicked")
+                    }
+                    function Home(){
+                        window.location.href = "producer.html";
+                    }
+                    document.getElementById("playlist").addEventListener("click",function(){
+                        alert('This is the Playlist page');
+                        document.body.style.backgroundColor = "pink";
+                    });
+                </script>
+                <button class="producer">Producer</button>
+            </div>
+            <div class="row">
+                <div class="left">
+                    <button>
+                        <h1>Top 40 TOP HITS</h1>
+                        <img src="images/pic2.jpeg" width="300" height="300">
+                    </button>
+                </div>
+            <div class="right">
+                <h2>This is the TOP 40 Playlist</h2>
+                <p>Search for a song to add to this playlist</p>
+                <input id="search" class="search" onkeyup="myFunction()" placeholder="Search a song">
+                <button id="find" onclick="Search()">Search</button>
+                <p id="p"></p>
+                <ul id="songs" class="list">
+                    <li id="vampire" class="list"><a>1.Vampire by Olivia Rodrigo</a></li>
+                    <li class="list"><a>2. Paint the town red by Doja Cat</a></li>
+                    <li class="list"><a>3. Snooze by SZA</a></li>
+                    <li class="list"><a>4. Cirlces by Post Malon</a></li>
+                    <li class="list"><a>5. Kill Bill by SZA</a></li>
+                </ul>  
+                <script>
+                    let song = {
+                        name: {
+                            name1:"Vampire",
+                            name2: "Paint the town red",
+                            name3: "Snooze",
+                            name4: "Circles",
+                            name5: "Kill Bill"
+                        },
+                        artist: {
+                            a1: "Olivia Rodrigo",
+                            a2: "Doja Cat",
+                            a3: "SZA",
+                            a4: "Post Malone",
+                            a5: "SZA"
+                            
+                        },
+                        genre: "pop"
+                    };
+                    function Search(){
+                        let x = document.getElementById("search").value;
+                        let text = "Your song is found";
+                        if(x==""){
+                            text="Please search for a song";
+                        }
+                        else if(x==song.name.name1 || x==song.name.name2 || x==song.name.name3 || x==song.name.name4 || x==song.name.name5){
+                            text;
+                        }
+                        else{
+                            text="We can't find your song";
+                        }
+                        document.getElementById("p").innerHTML = text;
+                    }
+                    function myFunction() {
+                        
+                        var input, filter, ul, li, a, i, txtValue;
+                        input = document.getElementById("search");
+                        filter = input.value.toUpperCase();
+                        ul = document.getElementById("songs");
+                        li = ul.getElementsByTagName("li");
+                        for (i = 0; i < li.length; i++) {
+                            a = li[i].getElementsByTagName("a")[0];
+                            txtValue = a.textContent || a.innerText;
+                            if(txtValue=="1.Vampire by Olivia Rodrigo"){
+                                song.timeSlot = "1pm-2pm";
+                                console.log(song.timeSlot);
+                                console.log(song.name.name1);
+                            }
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                li[i].style.display = "";
+                            } else {
+                                li[i].style.display = "none";
+                            }
+                        }
+                    }
+                    
+
+                </script>              
+            </div>
+        </section>
+    </section>
+    <section>
+            <h3 class="other">Othe Playlists</h3>
+            <div class="container">
+                    <button>
+                        <h4>Summer Playlist</h4>
+                        <img src="images/1c22bd48c7aa98182ba78d7ce55030b0.jpg" width="100" height="100">
+                    </button>
+                    <button>
+                        <h5 >Workout Playlist</h5>
+                        <img src="images/workout.jpeg" width="100" height="100" >
+                    </button>
+                    <button>
+                        <h6 style="font-size: 15px;">Indie Playlist</h6>
+                        <img src="images/hand-drawn-indie-music-illustration_23-2149676420.avif" width="100" height="100" style="margin-bottom: 20px;">
+                    </button>
+                    
+            </div>
+    </section>
+    </section>
+    <footer class="container" style="margin-top: 2px;">
+        <audio controls autoplay loop class="audio" data-role="audio-player">
+        <source src="music/ChimSau-MCKTrungTran-7205660.mp3" width="200" height="200" type="audio/mp3"/>
+        </audio>
+        <figure style="margin-top: -10px;">
+            <img src="images/20e5b1ef9c87e43d8303774d4282dde1.jpg" alt="Trulli" style="width:30%">
+            <figcaption>Current playing: Chim Sau by MCK&TrungTran</figcaption>
+        </figure>
+    </footer>
+    </body>
+</html>
