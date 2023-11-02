@@ -1,0 +1,33 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+    <a class="navbar-brand" style=" font-family:Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    border:none;
+    background-color: inherit;
+    color:black;
+    cursor: pointer;
+" href="/producer.html">@GenZWave</a>
+    <ul class="navbar-nav mr-auto" class="function">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Announcement</a>
+      </li>
+      <li class="nav-item" id="playlist">
+        <a class="nav-link" href="/Playlist.html">Playlist</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/">Promotion</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/">Producer</a>
+      </li>
+    </ul>
+  </nav>
+  <script>
+    function Click(){
+        console.log("Button Clicked")
+    }
+    document.getElementById("playlist").addEventListener("click",function(){
+        alert('This is the Playlist page');
+    });
+</script>
